@@ -112,6 +112,7 @@
 			</li>
 		</ul>
 	</nav>
+</div>
 	<br>
 	<hr style="height:1px;border-width:0;background-color:black"></br>
 
@@ -214,8 +215,9 @@
 				<p class="call">Search for your favorite movies on YouTube</p>
 			</div>
 		</div>
+
+	<br><hr style="height:1px;border-width:0;background-color:black"></br>
     </div>
-	<br><hr style="height:1px;border-width:0;background-color:black"></br>	
 		
 	<div id="DAILYMOTION" style="text-align:center;">
 		<h2>Daily Motion</h2>
@@ -246,8 +248,9 @@
 				<p class="call">Did you find what you were looking for? If not, try on the next source!</p>
 			</div>
 		</div>
-    </div>
+
 	<br><hr style="height:1px;border-width:0;background-color:black"></br>
+    </div>
 	
 	<div id="NETFLIX" style="text-align:center;">
 		<h2>Netflix</h2>
@@ -262,8 +265,9 @@
 			  <br> <br/>
 				<p class="call">Nexflix's movies now available for free on our website</p>
 			</div>
-		</div>
+
 		<br><hr style="height:1px;border-width:0;background-color:black"></br>
+        </div>
 		
 	<div id="AMAZONVIDEO" style="text-align:center;">
 		<h2>Amazon Video </h2>
@@ -281,9 +285,9 @@
 			</div>
 		</div>
 		</div></br></br>
-	</div>	
+
 		<br><hr style="height:1px;border-width:0;background-color:black"></br>
-	
+    </div>
 	<div id="DISNEYPLUS" style="text-align:center;">
 	<h2>Disney Plus</h2>
 	<br>
@@ -299,7 +303,8 @@
 
 			</div>
 		</div>
-	<br><hr style="height:1px;border-width:0;background-color:black"></br>	
+	<br><hr style="height:1px;border-width:0;background-color:black"></br>
+    </div>
 	<div id="REVIEWS" style="text-align:center;">
 		<h2>Reviews</h2>
 		<br>
