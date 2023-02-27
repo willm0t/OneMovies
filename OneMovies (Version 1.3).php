@@ -214,6 +214,7 @@
 				<p class="call">Search for your favorite movies on YouTube</p>
 			</div>
 		</div>
+    </div>
 	<br><hr style="height:1px;border-width:0;background-color:black"></br>	
 		
 	<div id="DAILYMOTION" style="text-align:center;">
@@ -245,6 +246,7 @@
 				<p class="call">Did you find what you were looking for? If not, try on the next source!</p>
 			</div>
 		</div>
+    </div>
 	<br><hr style="height:1px;border-width:0;background-color:black"></br>
 	
 	<div id="NETFLIX" style="text-align:center;">
