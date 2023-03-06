@@ -641,7 +641,7 @@ window.onclick = function(event) {
 		
 	<div class="footer">
 		<br>
-		<footer>&copy2022  Roberta Stendardo  |  Oxford Brookes University  |  Agile Project</footer>
+		<footer>&copy2022  Roberta Stendardo | Rob Willmot | Jack O'Regan |  |  Oxford Brookes University  |  Agile Project</footer>
 		<br>
 
 	</div>
