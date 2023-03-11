@@ -10,10 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<!-- Titolo del sito 	-->
+<!-- Website Title 	-->
 	<title>OneMovies
 	</title>
 
+    <!-- Website's CSS-->
 	<style>
 	/* Make the image fully responsive */
 	.carousel-inner img {
@@ -70,15 +71,14 @@
 	
 </style>
 	
-
+<!-- Icon -->
+    <!-- Please download the logo image on own machine and change the href path to visualize it -->
 <link rel="shortcut icon" type="image/x-icon" href="C:\Users\rober\Desktop\OneMovies website\logo.png" />
-	
-	
-	
 </head>	
 
 <body>
 
+<!-- Nav bar -->
 <div class="container">
 	<div id="main" style="text-align:center;">
 
@@ -115,6 +115,15 @@
 	<br>
 	<hr style="height:1px;border-width:0;background-color:black"></br>
 
+    <!-- SEARCH BUTTON -->
+    <form id="form" role="search">
+        <input type="search" id="query" name="q"
+               placeholder="Search..."
+               label="Search through site content">
+        <button  style="width:auto;" <i class="fa fa-search"></i></button>
+    </form>
+
+    <!-- Please download the logo image on own machine and change the src path to visualize it -->
 	<div>
 		<h1>OneMovies <img src="C:\Users\rober\Desktop\UNIVERSITY\COMP5022 - Innovative Product Development\coursework\OneMovies website\logo.png" style="max-width:20%; height:auto;"/></h1>
 		<h2>An all inclusive streaming and downloading platform that supports video content from all the websites you love.</h2> <br>
