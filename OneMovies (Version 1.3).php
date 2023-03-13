@@ -216,6 +216,23 @@
 			}
 			mysqli_close($conn);
 			?>
+                <form action="" method="post">
+                    <button name="markWatched" value="Mark as Already Watched">Mark as Already Watched</button>
+                </form>
+                <?php
+                $dbServername = "localhost";
+                $dbUsername = "root";
+                $dbPassword = "backdoor";
+                $dbName = "onemovies";
+                $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+                if(isset($_POST['markWatched'])){
+                    $videoId = 1; // Replace 1 with the ID of the video that was watched
+                    $userId = 0; // Replace 0 with the ID of the user who watched the video
+                    $sql = "INSERT INTO video_watched (video_id, user_id) VALUES ($videoId, $userId)";
+                    mysqli_query($conn, $sql);
+                }
+                mysqli_close($conn);
+                ?>
 			</div>
 			<div class="col-8" style="text-align: justify;">
 			  <input type="text" placeholder="Search...">
@@ -248,6 +265,23 @@
 			}
 			mysqli_close($conn);
 			?>
+                <form action="" method="post">
+                    <button name="markWatched" value="Mark as Already Watched">Mark as Already Watched</button>
+                </form>
+                <?php
+                $dbServername = "localhost";
+                $dbUsername = "root";
+                $dbPassword = "backdoor";
+                $dbName = "onemovies";
+                $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+                if(isset($_POST['markWatched'])){
+                    $videoId = 1; // Replace 1 with the ID of the video that was watched
+                    $userId = 0; // Replace 0 with the ID of the user who watched the video
+                    $sql = "INSERT INTO video_watched (video_id, user_id) VALUES ($videoId, $userId)";
+                    mysqli_query($conn, $sql);
+                }
+                mysqli_close($conn);
+                ?>
 			</div>
 			<div class="col-8" style="text-align: justify;">
 			  <input type="text" placeholder="Search...">
@@ -312,12 +346,52 @@
 		</div>
 	<br><hr style="height:1px;border-width:0;background-color:black"></br>
     </div>
+<h2>Already Watched:</h2>
+<?php
+$dbServername = "localhost";
+$dbUsername = "root";
+$dbPassword = "backdoor";
+$dbName = "onemovies";
+$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+$userId = 0; // Replace 0 with the ID of the user whose watched videos should be displayed
+$sql = "SELECT l.title, l.embed, v.watched_at FROM listof l INNER JOIN video_watched v ON l.listof = v.video_id WHERE v.user_id = $userId";
+$result = mysqli_query($conn, $sql);
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        echo "<div>";
+        echo "<h3>".$row['title']."</h3>";
+        echo "<div>".$row['embed']."</div>";
+        echo "<p>Watched on: ".$row['watched_at']."</p>";
+        echo "</div>";
+    }
+} else {
+    echo "<p>No videos have been marked as watched.</p>";
+}
+mysqli_close($conn);
+?>
+
 	<div id="REVIEWS" style="text-align:center;">
 		<h2>Reviews</h2>
 		<br>
 		<br>
  <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+     <form action="" method="post">
+         <h2>Rate and review:</h2>
+         <label for="rating">Rating:</label>
+         <select name="rating" id="rating">
+             <option value="1">1 star</option>
+             <option value="2">2 stars</option>
+             <option value="3">3 stars</option>
+             <option value="4">4 stars</option>
+             <option value="5">5 stars</option>
+         </select><br><br>
+         <label for="review">Review:</label><br>
+         <textarea id="review" name="review" rows="5" cols="50"></textarea><br><br>
+         <button name="submit_review" type="submit">Submit Review</button>
+     </form>
+
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
