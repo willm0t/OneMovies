@@ -104,6 +104,11 @@
 			<li class="nav-item">
 			  <a class="nav-link" href="#DISNEYPLUS">Disney Plus</a>
 			</li>
+            <!--rob-->
+            <li class="nav-item">
+                <a class="nav-link" href="#GENRE">Genres</a>
+            </li>
+            <!---->
 			<li class="nav-item">
 			  <a class="nav-link" href="#REVIEWS">Reviews</a>
 			</li>
@@ -346,6 +351,14 @@
 		</div>
 	<br><hr style="height:1px;border-width:0;background-color:black"></br>
     </div>
+<!--rob-->
+<div ="GENRE" style="text-align:center;">
+<h2>Genre</h2>
+    <li>Horror</li>
+    <li>Action</li>
+    <li>Comedy</li>
+</div>
+<!----->
 <h2>Already Watched:</h2>
 <?php
 $dbServername = "localhost";
