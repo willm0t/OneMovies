@@ -9,70 +9,68 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- bootstrap4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <!-- Website Title 	-->
-    <title>OneMovies
-    </title>
+    <title>OneMovies</title>
 
     <!-- Website's CSS-->
     <link rel="stylesheet" href="style.css">
 
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Icon -->
     <!-- Please download the logo image on own machine and change the href path to visualize it -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.png"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
 <!-- Nav bar -->
-<div class="container">
-    <div id="main" style="text-align:center;">
-
-	</div>
-	
-	<nav class="navbar navbar-expand-sm bg-dark navbar-nav justify-content-center">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-			  <a class="nav-link" href="#ALLSHOWS">All Shows</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#YOUTUBE">YouTube</a>
-			</li>
-				<li class="nav-item">
-			  <a class="nav-link" href="#DAILYMOTION">DailyMotion</a>
-			</li>
-				<li class="nav-item">
-			  <a class="nav-link" href="#NETFLIX">Netflix</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#AMAZONVIDEO">Amazon Video</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#DISNEYPLUS">Disney Plus</a>
-			</li>
+<div class="container mx-auto">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-nav justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#ALLSHOWS">All Shows</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#YOUTUBE">YouTube</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#DAILYMOTION">DailyMotion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#NETFLIX">Netflix</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#AMAZONVIDEO">Amazon Video</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#DISNEYPLUS">Disney Plus</a>
+            </li>
             <!--rob-->
             <li class="nav-item">
                 <a class="nav-link" href="#GENRE">Genres</a>
             </li>
             <!---->
-			<li class="nav-item">
-			  <a class="nav-link" href="#REVIEWS">Reviews</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#LOGIN">Login</a>
-			</li>
-		</ul>
-	</nav>
-	<br>
-	<hr style="height:1px;border-width:0;background-color:black"></br>
+            <li class="nav-item">
+                <a class="nav-link" href="#REVIEWS">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#LOGIN">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <hr style="height:1px;border-width:0;background-color:black">
+    <br/>
 
     <!-- SEARCH BUTTON -->
     <form id="form" role="search">
@@ -181,7 +179,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
                         mysqli_query($conn, $sql);
                     }
                 } catch (Exception $e) {
-                    echo  $e->getMessage();
+                    echo $e->getMessage();
                 }
                 ?>
                 <form action="" method="post">
@@ -204,7 +202,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
         </div>
         <br>
         <hr style="height:1px;border-width:0;background-color:black">
-        </br>
+        <br/>
     </div>
 
     <div id="DAILYMOTION" style="text-align:center;">
@@ -286,63 +284,72 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
             </div>
         </div>
+        <br>
+        <hr style="height:1px;border-width:0;background-color:black">
+        <br>
     </div>
-    </br></br>
-</div>
-<br>
-<hr style="height:1px;border-width:0;background-color:black">
-</br>
 
+    <div id="DISNEYPLUS" style="text-align:center;">
+        <h2>Disney Plus</h2>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://media.comicbook.com/2018/11/disney-plus-logo-1143358.jpeg" alt="Disney Plus"
+                     style="max-width:100%; height:auto;"/>
+            </div>
+            <div class="col-8" style="text-align: justify;">
+                <input type="text" placeholder="Search...">
+                <br> <br/>
+                <p class="call">Search for your favorite movie available on Disney Plus </p>
 
-<div id="DISNEYPLUS" style="text-align:center;">
-    <h2>Disney Plus</h2>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-4">
-            <img src="https://media.comicbook.com/2018/11/disney-plus-logo-1143358.jpeg" alt="Disney Plus"
-                 style="max-width:100%; height:auto;"/>
+            </div>
         </div>
-        <div class="col-8" style="text-align: justify;">
-            <input type="text" placeholder="Search...">
-            <br> <br/>
-            <p class="call">Search for your favorite movie available on Disney Plus </p>
-
-			</div>
-		</div>
-	<br><hr style="height:1px;border-width:0;background-color:black"></br>
+        <br>
+        <hr style="height:1px;border-width:0;background-color:black">
+        <br/>
     </div>
-<!--rob-->
-<div ="GENRE" style="text-align:center;">
-<h2>Genre</h2>
-    <li>Horror</li>
-    <li>Action</li>
-    <li>Comedy</li>
-</div>
-<!----->
-<h2>Already Watched:</h2>
-<?php
-$userId = 0; // Replace 0 with the ID of the user whose watched videos should be displayed
-$sql = "SELECT v.title, v.embed, vw.watched_at FROM video v INNER JOIN video_watched vw ON v.video_id = vw.video_id WHERE vw.user_id = $userId";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<div>";
-        echo "<h3>" . $row['title'] . "</h3>";
-        echo "<div><embed type='image/jpg' src='". $row['embed'] ."' width='300' height='200'></div>";
-        echo "<p>Watched on: " . $row['watched_at'] . "</p>";
-        echo "</div>";
-    }
-} else {
-    echo "<p>No videos have been marked as watched.</p>";
-}
-?>
 
-<div id="REVIEWS" style="text-align:center;">
-    <h2>Reviews</h2>
     <br>
+    <hr style="height:1px;border-width:0;background-color:black">
+    <br/>
+    <!--rob-->
+    <div id="GENRE" style="text-align: center;">
+        <h2>Genre</h2>
+        <ul>
+            <li>Horror</li>
+            <li>Action</li>
+            <li>Comedy</li>
+        </ul>
+    </div>
     <br>
-    <head>
+    <hr style="height:1px;border-width:0;background-color:black">
+    <br/>
+    <!----->
+    <div id="WATCHED">
+        <h2>Already Watched:</h2>
+        <?php
+        $userId = 0; // Replace 0 with the ID of the user whose watched videos should be displayed
+        $sql = "SELECT v.title, v.embed, vw.watched_at FROM video v INNER JOIN video_watched vw ON v.video_id = vw.video_id WHERE vw.user_id = $userId";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<div>";
+                echo "<h3>" . $row['title'] . "</h3>";
+                echo "<div><embed type='image/jpg' src='" . $row['embed'] . "' width='300' height='200'></div>";
+                echo "<p>Watched on: " . $row['watched_at'] . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No videos have been marked as watched.</p>";
+        }
+        ?>
+    </div>
+
+    <div id="REVIEWS" style="text-align:center;">
+        <h2>Reviews</h2>
+        <br>
+        <br>
         <form action="" method="post">
             <h2>Rate and review:</h2>
             <label for="rating">Rating:</label>
@@ -358,392 +365,140 @@ if (mysqli_num_rows($result) > 0) {
             <button name="submit_review" type="submit">Submit Review</button>
         </form>
 
+        <span class="heading">User Rating</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p>4.1 average based on 254 reviews.</p>
+        <hr style="border:3px solid #f1f1f1">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Font Awesome Icon Library -->
-        <link rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: Arial;
-                margin: 0 auto; /* Center website */
-                max-width: 800px; /* Max width */
-                padding: 20px;
-            }
-
-            .heading {
-                font-size: 25px;
-                margin-right: 25px;
-            }
-
-            .fa {
-                font-size: 25px;
-            }
-
-            .checked {
-                color: orange;
-            }
-
-            /* Three column layout */
-            .side {
-                float: left;
-                width: 15%;
-                margin-top: 10px;
-            }
-
-            .middle {
-                margin-top: 10px;
-                float: left;
-                width: 70%;
-            }
-
-            /* Place text to the right */
-            .right {
-                text-align: right;
-            }
-
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            /* The bar container */
-            .bar-container {
-                width: 100%;
-                background-color: #f1f1f1;
-                text-align: center;
-                color: white;
-            }
-
-            /* Individual bars */
-            .bar-5 {
-                width: 60%;
-                height: 18px;
-                background-color: #04AA6D;
-            }
-
-            .bar-4 {
-                width: 30%;
-                height: 18px;
-                background-color: #2196F3;
-            }
-
-            .bar-3 {
-                width: 10%;
-                height: 18px;
-                background-color: #00bcd4;
-            }
-
-            .bar-2 {
-                width: 4%;
-                height: 18px;
-                background-color: #ff9800;
-            }
-
-            .bar-1 {
-                width: 15%;
-                height: 18px;
-                background-color: #f44336;
-            }
-
-            /* Responsive layout - make the columns stack on top of each other instead of next to each other */
-            @media (max-width: 400px) {
-                .side, .middle {
-                    width: 100%;
-                }
-
-                .right {
-                    display: none;
-                }
-            }
-        </style>
-    </head>
-    <body>
-
-    <span class="heading">User Rating</span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <p>4.1 average based on 254 reviews.</p>
-    <hr style="border:3px solid #f1f1f1">
-
-    <div class="row">
-        <div class="side">
-            <div>5 star</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-5"></div>
+        <div class="row">
+            <div class="side">
+                <div>5 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-5"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>150</div>
+            </div>
+            <div class="side">
+                <div>4 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-4"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>63</div>
+            </div>
+            <div class="side">
+                <div>3 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-3"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>15</div>
+            </div>
+            <div class="side">
+                <div>2 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-2"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>6</div>
+            </div>
+            <div class="side">
+                <div>1 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-1"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>20</div>
             </div>
         </div>
-        <div class="side right">
-            <div>150</div>
-        </div>
-        <div class="side">
-            <div>4 star</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-4"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>63</div>
-        </div>
-        <div class="side">
-            <div>3 star</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-3"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>15</div>
-        </div>
-        <div class="side">
-            <div>2 star</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-2"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>6</div>
-        </div>
-        <div class="side">
-            <div>1 star</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-1"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>20</div>
-        </div>
+        <br/>
+        <hr style="height:1px;border-width:0;background-color:black">
+        <br/>
     </div>
 
-    </body>
+    <div id="LOGIN" style="text-align:center;">
+        <h2>Login</h2>
+        <br>
+        <br>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
+        <div id="id01" class="modal">
 
-    <br>
-    <hr style="height:1px;border-width:0;background-color:black">
-    </br>
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+                        Cancel
+                    </button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+        <br>
+        <hr style="height:1px;border-width:0;background-color:black">
+        <br/>
+
+    </div>
 </div>
 
-<div id="LOGIN" style="text-align:center;">
-    <h2>Login</h2>
+
+
+<div class="footer">
     <br>
+    <footer>&copy2022 Roberta Stendardo | Rob Willmot | Jack O'Regan | Zeyad Khalil | Brayan Alexis | Alya
+        Al-Derbesti | Oxford Brookes University | Agile Project
+    </footer>
     <br>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-            }
 
-            /* Full-width input fields */
-            input[type=text], input[type=password] {
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                display: inline-block;
-                border: 1px solid #ccc;
-                box-sizing: border-box;
-            }
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
 
-            /* Set a style for all buttons */
-            button {
-                background-color: #04AA6D;
-                color: white;
-                padding: 14px 20px;
-                margin: 8px 0;
-                border: none;
-                cursor: pointer;
-                width: 100%;
-            }
-
-            button:hover {
-                opacity: 0.8;
-            }
-
-            /* Extra styles for the cancel button */
-            .cancelbtn {
-                width: auto;
-                padding: 10px 18px;
-                background-color: #f44336;
-            }
-
-            /* Center the image and position the close button */
-            .imgcontainer {
-                text-align: center;
-                margin: 24px 0 12px 0;
-                position: relative;
-            }
-
-            img.avatar {
-                width: 40%;
-                border-radius: 50%;
-            }
-
-            .container {
-                padding: 16px;
-            }
-
-            span.psw {
-                float: right;
-                padding-top: 16px;
-            }
-
-            /* The Modal (background) */
-            .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                left: 0;
-                top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgb(0, 0, 0); /* Fallback color */
-                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-                padding-top: 60px;
-            }
-
-            /* Modal Content/Box */
-            .modal-content {
-                background-color: #fefefe;
-                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-                border: 1px solid #888;
-                width: 80%; /* Could be more or less, depending on screen size */
-            }
-
-            /* The Close Button (x) */
-            .close {
-                position: absolute;
-                right: 25px;
-                top: 0;
-                color: #000;
-                font-size: 35px;
-                font-weight: bold;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: red;
-                cursor: pointer;
-            }
-
-            /* Add Zoom Animation */
-            .animate {
-                -webkit-animation: animatezoom 0.6s;
-                animation: animatezoom 0.6s
-            }
-
-            @-webkit-keyframes animatezoom {
-                from {
-                    -webkit-transform: scale(0)
-                }
-                to {
-                    -webkit-transform: scale(1)
-                }
-            }
-
-            @keyframes animatezoom {
-                from {
-                    transform: scale(0)
-                }
-                to {
-                    transform: scale(1)
-                }
-            }
-
-            /* Change styles for span and cancel button on extra small screens */
-            @media screen and (max-width: 300px) {
-                span.psw {
-                    display: block;
-                    float: none;
-                }
-
-                .cancelbtn {
-                    width: 100%;
-                }
-            }
-        </style>
-    </head>
-    <body>
-
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-    <div id="id01" class="modal">
-
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-            </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
-                    Cancel
-                </button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    </div>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-    </script>
-
-    </body>
-
-    <br>
-    <hr style="height:1px;border-width:0;background-color:black">
-    </br>
-
-    <div class="footer">
-        <br>
-        <footer>&copy2022 Roberta Stendardo | Rob Willmot | Jack O'Regan | Zeyad Khalil | Brayan Alexis | Alya
-            Al-Derbesti | Oxford Brookes University | Agile Project
-        </footer>
-        <br>
-
-    </div>
-
-</div>
-
+    }
+</script>
 <!-- Go up button  -->
 <script type="text/javascript">
     var scrolltotop = {
