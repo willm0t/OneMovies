@@ -36,39 +36,43 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 <div class="container">
     <div id="main" style="text-align:center;">
 
-    </div>
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-nav justify-content-center">
-        <ul class="navbar-nav">
+	</div>
+	
+	<nav class="navbar navbar-expand-sm bg-dark navbar-nav justify-content-center">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+			  <a class="nav-link" href="#ALLSHOWS">All Shows</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#YOUTUBE">YouTube</a>
+			</li>
+				<li class="nav-item">
+			  <a class="nav-link" href="#DAILYMOTION">DailyMotion</a>
+			</li>
+				<li class="nav-item">
+			  <a class="nav-link" href="#NETFLIX">Netflix</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#AMAZONVIDEO">Amazon Video</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#DISNEYPLUS">Disney Plus</a>
+			</li>
+            <!--rob-->
             <li class="nav-item">
-                <a class="nav-link" href="#ALLSHOWS">All Shows</a>
+                <a class="nav-link" href="#GENRE">Genres</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#YOUTUBE">YouTube</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#DAILYMOTION">DailyMotion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#NETFLIX">Netflix</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#AMAZONVIDEO">Amazon Video</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#DISNEYPLUS">Disney Plus</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#REVIEWS">Reviews</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#LOGIN">Login</a>
-            </li>
-        </ul>
-    </nav>
-    <br>
-    <hr style="height:1px;border-width:0;background-color:black">
-    <br/>
+            <!---->
+			<li class="nav-item">
+			  <a class="nav-link" href="#REVIEWS">Reviews</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#LOGIN">Login</a>
+			</li>
+		</ul>
+	</nav>
+	<br>
+	<hr style="height:1px;border-width:0;background-color:black"></br>
 
     <!-- SEARCH BUTTON -->
     <form id="form" role="search">
@@ -232,7 +236,6 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
                     $userId = 0; // Replace 0 with the ID of the user who watched the video
                     $sql = "INSERT INTO video_watched (video_id, user_id) VALUES ($videoId, $userId)";
                     mysqli_query($conn, $sql);
-                    $_POST = array();
                 }
                 ?>
             </div>
@@ -244,7 +247,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
         </div>
         <br>
         <hr style="height:1px;border-width:0;background-color:black">
-        </br>
+        <br/>
     </div>
 
     <div id="NETFLIX" style="text-align:center;">
@@ -264,7 +267,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
         </div>
         <br>
         <hr style="height:1px;border-width:0;background-color:black">
-        </br>
+        <br/>
     </div>
 
     <div id="AMAZONVIDEO" style="text-align:center;">
@@ -305,12 +308,18 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
             <br> <br/>
             <p class="call">Search for your favorite movie available on Disney Plus </p>
 
-        </div>
+			</div>
+		</div>
+	<br><hr style="height:1px;border-width:0;background-color:black"></br>
     </div>
-    <br>
-    <hr style="height:1px;border-width:0;background-color:black">
-    </br>
+<!--rob-->
+<div ="GENRE" style="text-align:center;">
+<h2>Genre</h2>
+    <li>Horror</li>
+    <li>Action</li>
+    <li>Comedy</li>
 </div>
+<!----->
 <h2>Already Watched:</h2>
 <?php
 $userId = 0; // Replace 0 with the ID of the user whose watched videos should be displayed
