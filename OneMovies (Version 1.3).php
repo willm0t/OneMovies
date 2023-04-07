@@ -55,18 +55,20 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
             <li class="nav-item">
                 <a class="nav-link" href="#DISNEYPLUS">Disney Plus</a>
             </li>
-            <!--rob-->
+            <li class="nav-item">
+                <a class="nav-link" href="#REVIEWS">Reviews</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#GENRE">Genres</a>
             </li>
-            <!---->
             <li class="nav-item">
-                <a class="nav-link" href="#REVIEWS">Reviews</a>
+                <a class="nav-link" href="#MYLIST">My List and Watched</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#LOGIN">Login</a>
             </li>
         </ul>
+
     </nav>
     <br>
     <hr style="height:1px;border-width:0;background-color:black">
@@ -313,19 +315,32 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
     <br>
     <hr style="height:1px;border-width:0;background-color:black">
     <br/>
-    <!--rob-->
-    <div id="GENRE" style="text-align: center;">
-        <h2>Genre</h2>
-        <ul>
-            <li>Horror</li>
-            <li>Action</li>
-            <li>Comedy</li>
-        </ul>
+    <!-- GENRE SECTION TEMPLATE -->
+    <div id="GENRE" style="text-align:center;">
+        <h2>Genres</h2>
+
+        <dl style="text-align:left;">
+            <dt>Comedy</dt>
+            <dd>
+                <iframe style="max-width:100%; height:auto;" src="https://www.youtube.com/embed/VexynUlEcUg"> </iframe> </dd>
+            <dt>Horror</dt>
+            <dd>
+                <iframe style="max-width:100%; height:auto;" src="https://www.youtube.com/embed/XimvdthKNas" > </iframe></dd>
+            <dt>Romance</dt>
+            <dd>
+                <iframe style="max-width:100%; height:auto;" src="https://www.youtube.com/embed/joIzqAueexA"> </iframe></dd>
+            <dt>Action</dt>
+            <dd>
+                <iframe style="max-width:100%; height:auto;" src="https://www.youtube.com/embed/Jp7NciCYnJ0"> </iframe></dd>
+            <dt>Drama</dt>
+            <dd>
+                <iframe style="max-width:100%; height:auto;" src="https://www.youtube.com/embed/jQysXkS3GPw"> </iframe></dd>
+        </dl>
     </div>
-    <br>
-    <hr style="height:1px;border-width:0;background-color:black">
-    <br/>
-    <!----->
+
+    <br><hr style="height:1px;border-width:0;background-color:black"></br>
+    <!-- GENRE SECTION TEMPLATE END -->
+
     <div id="WATCHED">
         <h2>Already Watched:</h2>
         <?php
